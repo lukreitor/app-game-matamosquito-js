@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mata Mosquito Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/estilo.css">
+
+        <script>
+            function iniciarJogo() {
+                var nivel = document.getElementById('nivel').value
+
+                if (nivel === '') 
+                {
+                    alert ('Selecione um nível para iniciar jogo')
+                    return false
+                }
+
+                window.location.href = "app.html?" + nivel  /* O sinal de interrogação separa a pagina regisitada do parametro enviado */
+            }
+        </script>
+    </head>
+
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex justify-content-center">
+                            <img src="imagens/game.png" alt="Game over">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <div class="mb-2">
+                            <select class="form-control" id="nivel">
+                                <option value="">-- Selecione o nível --</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Dificil">Difícil</option>
+                                <option value="ChuckNorris">Chuck Norris</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary btn-lg" onclick="iniciarJogo()">
+                                Iniciar Jogo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

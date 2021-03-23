@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Lucas Martins da Silva Sena"/>
+    <meta http-equiv="content-language" content="pt-br, en-US"/>
+    <meta http-equiv="content-type" content="text/html"/>
+    <meta name="copyright" content="©LiBerTECC"/>
+    <meta name="description" content="Página Desenvolvida por Lucas Martins"/>
+    <meta name="keywords" content="Curso, Site de Estudo, Udemy, Desenvolvimento Web Completo"/>
+    <meta http-equiv="refresh" content="600"/>
+    <meta name="generator" content="PhpStorm"/>
+    <meta name="rating" content="general"/>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>mosquito</title>
+    <link rel="icon" href="imagens/mosquito.png">
+    <script src="jogo.js"></script>
+    <style>
+
+    </style>
+</head>
+
+
+<body onresize="ajustaTamanhoPalcoJogo()">
+    
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="imagens/coracao_cheio.png">
+            <img id="v2" src="imagens/coracao_cheio.png">
+            <img id="v3" src="imagens/coracao_cheio.png">
+        </div>
+
+        <div class="cronometro">Tempo Restante: <span id="cronometro"></span></div>
+    </div>
+
+    <script>
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criaMosca = setInterval(function() {
+            posicaoRandomica()
+        },criaMosquitoTempo)
+    </script>
+</body>
